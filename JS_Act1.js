@@ -12,7 +12,7 @@ function guardarArray() {
 
     var array2 = [];
     array2 = new Array('nombre', 'empresa', 'cargo', 'email'); //meto manualmente las id 
-
+    console.log("mi primera subida con push a github");
     return array2;
 }
 
