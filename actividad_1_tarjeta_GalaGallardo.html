@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta_Gala Gallardo</title>
+
+    <script src="https://kit.fontawesome.com/6b5ec94e58.js" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="CSS_Act1.css">
+
+</head>
+
+
+<body style="background-color: rgb(238, 242, 245);">
+
+
+    <form action="actividad_1_tarjeta_GalaGallardo.html" method="get" id="formulario">
+
+
+        <!--documento de trabajo-->
+        <div class="documento">
+
+
+
+            <!--LADO IZQUIERDO: EL USUARIO VE AQUI SU TARJETA-->
+            <div class="container1">
+
+
+                <div id="fotoDocumento">
+                    <img id="foto" src="Imagenes/logo.png" alt="Card mage">
+                </div>
+
+
+                <!--El usuario VE aqui sus DATOS personales-->
+                <div class="datos">
+                    <div class="card">
+                        <div class="card-body" id="card-body">
+                            <p id="card-title">Nombre Y Apellidos</p>
+                            <p id="card-text1">Empresa</p>
+                            <p id="card-text2">Cargo</p>
+                            <p id="card-text3">Email</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--El usuario VE aqui su FOTO-->
+                <div div="caja2">
+                    <div class="retrato" id="retrato">
+
+                        <div class="display" id="fotoRetrato"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br><br><br>
+
+
+            <!--LADO DERECHO: INTRODUCIR DATOS Y MANIPULAR EVENTOS-->
+            <div class="container2">
+
+
+                <!--El usuario INTRODUCE aqui sus DATOS personales-->
+                <div id="textoRecogido">
+                    <div id="cajasTexto">
+                        <div class="form-group">
+                            <label for="text">Nombre:</label>
+                            <input type="text" class="form-control" placeholder="Enter name" id="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Empresa:</label>
+                            <input type="text" class="form-control" placeholder="Enter company" id="empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Cargo:</label>
+                            <input type="text" class="form-control" placeholder="Enter ocupation" id="cargo">
+                        </div>
+                        <div class="form-group">
+                            <label for="text">Email:</label>
+                            <input type="text" class="form-control" placeholder="Enter email" id="email">
+                        </div>
+
+                        <!--El usuario PULSA aqui activar la funcion de borrarErrores previamente mostrados + se recogen sus DATOS personales por "submit"-->
+                        <button type="submit" class="btn btn-primary" id="enviar"
+                            onclick="borrarErrores()">Enviar</button>
+                    </div>
+                    <!--El programa crea aqui de forma dinamica los errores encontrados en la validacion de su datos personales-->
+                    <ul class="lista" id="validaciones">
+
+                    </ul>
+
+                </div>
+                <br></br>
+
+
+                <br></br>
+
+                <!--DISEÑO LIBRE DE TARJETA - BOTONES PARA ELEGIR ELEMENTO-->
+
+                <div class="dropdown"><strong>Pulsa cada elemento de la lista y muevelo con las feclas del
+                        teclado:</strong>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Diseña tu
+                        propia tarjeta
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" id="elemento1">Logo</a></li>
+                        <li><a class="dropdown-item" id="elemento2">Tus datos</a></li>
+                        <li><a class="dropdown-item" id="elemento3">Sube tu foto</a></li>
+                    </ul>
+                </div>
+
+                <br></br>
+
+
+
+                <div class="dropdown">
+
+                    <!--class que recogeré en JS para activar evento mouseover y cambiar el logo en la tarjeta-->
+                    <strong>Selecciona el logo de tu empresa </strong>
+
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Logo
+                    </button>
+
+                    <!--para elegir el logo-->
+                    <div class="dropdown-menu">
+                        <img id="foto1" src="Imagenes/hotel1.jpg" width="175px" height="100">
+                        <img id="foto2" src="Imagenes/hotel2.jpg" width="100px" height="100">
+                        <img id="foto3" src="Imagenes/hotel3.jpg" width="100px" height="100">
+                        <img id="foto4" src="Imagenes/hotel4.jpg" width="175px" height="100">
+                    </div>
+
+                    <br></br>
+
+                    <!--boton para subir la foto personal-->
+                    <input type="file" id="upload">
+                    <label for="upload" id="uploadbtn">Sube tu foto
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </label>
+                </div>
+                <br>
+
+                <!--el usuario activa por evento click el color de sus datos personales-->
+                <div class="form-group">
+                    <strong>Destaca tus datos personales:</strong>
+
+                    <button type="button" class="btn btn-info" id="btn1">Aqua</button>
+                    <button type="button" class="btn btn-danger" id="btn2">Rosa</button>
+                    <button type="button" class="btn btn-secondary" id="btn3">Grey</button>
+                    <button type="button" class="btn btn-success" id="btn4">Green</button>
+                </div>
+
+            </div>
+
+    </form>
+
+
+    <script src="JS_Act1.js"></script>
+
+
+
+
+
+</body>
+
+</html>
